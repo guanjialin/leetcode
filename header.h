@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "string.h"
 
 typedef enum {
     false,
@@ -44,5 +45,9 @@ void ListPrint(const struct ListNode *list)
     }
     printf("]\n");
 }
+
+#define array_print(array, size, fmt) \
+{ printf("["); for (int i = 0; i < size; ++i) printf(fmt, array[i]); printf("]\n"); }
+#define array_int_print(array, size) array_print(array, size, "%d\t")
 
 #endif //LEETCODE_HEADER_H
