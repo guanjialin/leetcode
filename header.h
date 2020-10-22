@@ -8,6 +8,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef enum {
+    false,
+    true
+} bool;
+
 struct ListNode {
     int val;
     struct ListNode *next;
