@@ -14,3 +14,4 @@ add_executable(1171.remove-zero-sum-consecutive-nodes-from-linked-list 1171.remo
 add_executable(725.split-linked-list-in-parts 725.split-linked-list-in-parts.cpp)
 add_executable(763.partition-labels 763.partition-labels.c)
 add_executable(02.04.partition-list-lcci lcci/02.04.partition-list-lcci.c)
+add_executable(148.sort-list 148.sort-list.c)

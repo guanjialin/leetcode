@@ -19,6 +19,7 @@ struct ListNode {
     struct ListNode *next;
 };
 
+#define list_create_from_int_array(data) ListCreate(data, array_int_len(data))
 struct ListNode *ListCreate(int *data, int len)
 {
     if (!data || !len) {
@@ -36,6 +37,7 @@ struct ListNode *ListCreate(int *data, int len)
     return p;
 }
 
+#define list_print(head) ListPrint(head)
 void ListPrint(const struct ListNode *list)
 {
     printf("[");
