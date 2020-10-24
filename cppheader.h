@@ -5,19 +5,20 @@
 #ifndef LEETCODE_CPPHEADER_H
 #define LEETCODE_CPPHEADER_H
 
-
 #include <iostream>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
+#include <stack>
 
 using std::unordered_map;
 using std::unordered_set;
 using std::vector;
+using std::stack;
+using std::pair;
 using std::cout;
 using std::cin;
 using std::endl;
-
 
 // Definition for a Node.
 class Node {
