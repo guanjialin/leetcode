@@ -17,21 +17,17 @@ public:
     vector<int> nextLargerNodes(ListNode* head) {
         int cnt = 0;
         stack<pair<int, int>> sp;
-        vector<int> ans = vector<int>(10000, 0);
+        vector<int> ans = vector<int>(ListNodeLength(head));
 
-        while (head || !sp.empty()) {
-            if (!sp.empty() && head->val > sp.top().second) {
-                while (!sp.empty() && head->val < sp.top().second) {
-                    auto p = sp.top();
-                    sp.pop();
-                    ans[p.first] = head->val;
-                    sp.push(pair<int, int>(cnt, head->val));
-                }
+        while (head) {
+            while (!sp.empty() && head->val > sp.top().second) {
+                auto p = sp.top();
+                sp.pop();
+                ans[p.first] = head->val;
             }
 
-            if (head) {
-                sp.push(pair<int, int>(cnt, head->val));
-            }
+            sp.push(pair<int, int>(cnt++, head->val));
+
             head = head->next;
         }
 
