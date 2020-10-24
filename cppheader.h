@@ -8,10 +8,15 @@
 
 #include <iostream>
 #include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 using std::unordered_map;
+using std::unordered_set;
 using std::vector;
+using std::cout;
+using std::cin;
+using std::endl;
 
 
 // Definition for a Node.
@@ -36,17 +41,14 @@ struct ListNode {
     void print();
     int length();
 
-    static ListNode *create(const int *data, int len);
+    static ListNode *create(vector<int> data);
 };
 
-ListNode * ListNode::create(const int *data, int len) {
-    if (!data || !len) {
-        return nullptr;
-    }
-
+ListNode * ListNode::create(vector<int> data) {
     struct ListNode *p = nullptr;
-    for (int i = len - 1; i >=0; --i) {
-        auto *node = new ListNode(data[i]);
+
+    for (auto iter = data.rbegin(); iter != data.rend(); ++iter) {
+        auto *node = new ListNode(*iter);
         node->next = p;
         p = node;
     }
