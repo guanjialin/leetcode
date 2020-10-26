@@ -55,4 +55,10 @@ void ListPrint(const struct ListNode *list)
 #define array_len(array, type) (sizeof(array) / sizeof(type))
 #define array_int_len(array) array_len(array, int)
 
+void array_int_swap(int data[], int index1, int index2) {
+    int temp = data[index1];
+    data[index1] = data[index2];
+    data[index2] = temp;
+}
+
 #endif //LEETCODE_HEADER_H
