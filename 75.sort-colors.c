@@ -6,22 +6,23 @@
 
 void sortColors(int* nums, int numsSize)
 {
-    int left_slow = 0, left_fast = 0;
-    int right_slow = numsSize - 1, right_fast = numsSize - 1;
+    int iter = 0;
+    int left = 0, right = numsSize - 1;
 
-    while (left_fast <= right_fast) {
-        if (nums[left_fast] == 0) {
-            nums[left_fast++] = 1;
-            nums[left_slow++] = 0;
-        } else if (nums[left_fast] == 2) {
-
+    while (iter <= right) {
+        if (nums[iter] == 0) {
+            array_int_swap(nums, left++, iter++);
+        } else if (nums[iter] == 2) {
+            array_int_swap(nums, right--, iter);
+        } else {
+            ++iter;
         }
     }
 }
 
 int main()
 {
-    int data[] = {2, 0, 2, 1, 1, 0};
+    int data[] = {2,0,2,1,1,0,0,0,0};
     sortColors(data, array_int_len(data));
     array_int_print(data, array_int_len(data));
 
