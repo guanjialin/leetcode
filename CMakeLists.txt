@@ -20,3 +20,4 @@ add_executable(1019.next-greater-node-in-linked-list 1019.next-greater-node-in-l
 add_executable(80.remove-duplicates-from-sorted-array-ii 80.remove-duplicates-from-sorted-array-ii.c)
 add_executable(17.11.find-closest-lcci lcci/17.11.find-closest-lcci.c)
 add_executable(75.sort-colors 75.sort-colors.c)
+add_executable(1170.compare-strings-by-frequency-of-the-smallest-character 1170.compare-strings-by-frequency-of-the-smallest-character.c)
