@@ -10,11 +10,13 @@
 #include <unordered_set>
 #include <vector>
 #include <stack>
+#include <string>
 
 using std::unordered_map;
 using std::unordered_set;
 using std::vector;
 using std::stack;
+using std::string;
 using std::pair;
 using std::cout;
 using std::cin;
