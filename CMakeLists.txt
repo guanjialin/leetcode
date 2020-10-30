@@ -28,3 +28,4 @@ add_executable(1309.decrypt-string-from-alphabet-to-integer-mapping 1309.decrypt
 add_executable(1370.increasing-decreasing-string 1370.increasing-decreasing-string.c)
 add_executable(1576.replace-all-s-to-avoid-consecutive-repeating-characters 1576.replace-all-s-to-avoid-consecutive-repeating-characters.c)
 add_executable(1249.minimum-remove-to-make-valid-parentheses 1249.minimum-remove-to-make-valid-parentheses.cpp)
+add_executable(1347.minimum-number-of-steps-to-make-two-strings-anagram 1347.minimum-number-of-steps-to-make-two-strings-anagram.c)
