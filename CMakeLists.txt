@@ -26,3 +26,4 @@ add_executable(1614.maximum-nesting-depth-of-the-parentheses 1614.maximum-nestin
 add_executable(1614.maximum-nesting-depth-of-the-parentheses.c 1614.maximum-nesting-depth-of-the-parentheses.c)
 add_executable(657.robot-return-to-origin 657.robot-return-to-origin.c)
 add_executable(1309.decrypt-string-from-alphabet-to-integer-mapping 1309.decrypt-string-from-alphabet-to-integer-mapping.c)
+add_executable(1370.increasing-decreasing-string 1370.increasing-decreasing-string.c)
