@@ -4,6 +4,9 @@ project(leetcode)
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 14)
 
+add_compile_options(-Wall)
+# add_compile_options(-fsanitize=address -fno-omit-frame-pointer)
+
 add_executable(leetcode main.c header.h)
 add_executable(143.reorder-list 143.reorder-list.c)
 add_executable(35.fu-za-lian-biao-de-fu-zhi-lcof lcof/35.fu-za-lian-biao-de-fu-zhi-lcof.cpp)
@@ -29,3 +32,6 @@ add_executable(1370.increasing-decreasing-string 1370.increasing-decreasing-stri
 add_executable(1576.replace-all-s-to-avoid-consecutive-repeating-characters 1576.replace-all-s-to-avoid-consecutive-repeating-characters.c)
 add_executable(1249.minimum-remove-to-make-valid-parentheses 1249.minimum-remove-to-make-valid-parentheses.cpp)
 add_executable(1347.minimum-number-of-steps-to-make-two-strings-anagram 1347.minimum-number-of-steps-to-make-two-strings-anagram.c)
+add_executable(890.find-and-replace-pattern 890.find-and-replace-pattern.cpp)
+add_executable(381.insert-delete-getrandom-o1-duplicates-allowed 381.insert-delete-getrandom-o1-duplicates-allowed.cpp)
+add_executable(08.09.bracket-lcci lcci/08.09.bracket-lcci.c)
