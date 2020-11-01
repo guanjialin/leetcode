@@ -22,6 +22,8 @@ using std::pair;
 using std::cout;
 using std::cin;
 using std::endl;
+using std::min;
+using std::max;
 
 // Definition for a Node.
 class Node {
