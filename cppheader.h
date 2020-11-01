@@ -96,4 +96,12 @@ void ListNode::print()
     std::cout << "]" << std::endl;
 }
 
+#define __DEBUG__
+template <typename T>
+void DEBUG(T val) {
+#ifdef __DEBUG__
+    cout << "DEBUG: " << val << endl;
+#endif
+}
+
 #endif //LEETCODE_CPPHEADER_H
