@@ -11,6 +11,7 @@
 #include <vector>
 #include <stack>
 #include <string>
+#include <algorithm>
 
 using std::unordered_map;
 using std::unordered_set;

@@ -35,3 +35,4 @@ add_executable(1347.minimum-number-of-steps-to-make-two-strings-anagram 1347.min
 add_executable(890.find-and-replace-pattern 890.find-and-replace-pattern.cpp)
 add_executable(381.insert-delete-getrandom-o1-duplicates-allowed 381.insert-delete-getrandom-o1-duplicates-allowed.cpp)
 add_executable(08.09.bracket-lcci lcci/08.09.bracket-lcci.c)
+add_executable(893.groups-of-special-equivalent-strings 893.groups-of-special-equivalent-strings.cpp)
