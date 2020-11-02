@@ -42,3 +42,5 @@ add_executable(537.complex-number-multiplication 537.complex-number-multiplicati
 add_executable(791.custom-sort-string 791.custom-sort-string.cpp)
 add_executable(10.02.group-anagrams-lcci lcci/10.02.group-anagrams-lcci.cpp)
 add_executable(1189.maximum-number-of-balloons 1189.maximum-number-of-balloons.cpp)
+add_executable(349.intersection-of-two-arrays 349.intersection-of-two-arrays.cpp)
+add_executable(1455.check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence 1455.check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence.c)

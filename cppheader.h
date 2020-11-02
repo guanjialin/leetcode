@@ -98,6 +98,14 @@ void ListNode::print()
     std::cout << "]" << std::endl;
 }
 
+template <typename T>
+void vector_print(vector<T> vec) {
+    for (auto val : vec) {
+        cout << val << '\t';
+    }
+    cout << endl;
+}
+
 #define __DEBUG__
 template <typename T>
 void DEBUG(T val) {
