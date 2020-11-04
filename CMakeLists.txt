@@ -51,3 +51,6 @@ add_executable(1268.search-suggestions-system 1268.search-suggestions-system.cpp
 add_executable(1422.maximum-score-after-splitting-a-string 1422.maximum-score-after-splitting-a-string.c)
 add_executable(1496.path-crossing 1496.path-crossing.cpp)
 add_executable(1106.parsing-a-boolean-expression 1106.parsing-a-boolean-expression.cpp)
+add_executable(383.ransom-note 383.ransom-note.c)
+add_executable(1138.alphabet-board-path 1138.alphabet-board-path.c)
+add_executable(1507.reformat-date 1507.reformat-date.cpp)
