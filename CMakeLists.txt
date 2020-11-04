@@ -5,6 +5,7 @@ set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 14)
 
 add_compile_options(-Wall)
+add_compile_options(-lm)
 # add_compile_options(-fsanitize=address -fno-omit-frame-pointer)
 
 add_executable(leetcode main.c header.h)
@@ -47,3 +48,5 @@ add_executable(1455.check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence
 add_executable(1624.largest-substring-between-two-equal-characters 1624.largest-substring-between-two-equal-characters.c)
 add_executable(1023.camelcase-matching 1023.camelcase-matching.c)
 add_executable(1268.search-suggestions-system 1268.search-suggestions-system.cpp)
+add_executable(1422.maximum-score-after-splitting-a-string 1422.maximum-score-after-splitting-a-string.c)
+add_executable(1496.path-crossing 1496.path-crossing.cpp)
