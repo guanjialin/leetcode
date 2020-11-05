@@ -54,3 +54,8 @@ add_executable(1106.parsing-a-boolean-expression 1106.parsing-a-boolean-expressi
 add_executable(383.ransom-note 383.ransom-note.c)
 add_executable(1138.alphabet-board-path 1138.alphabet-board-path.c)
 add_executable(1507.reformat-date 1507.reformat-date.cpp)
+add_executable(57.insert-interval 57.insert-interval.cpp)
+add_executable(1446.consecutive-characters 1446.consecutive-characters.c)
+add_executable(127.word-ladder 127.word-ladder.cpp)
+add_executable(1585.check-if-string-is-transformable-with-substring-sort-operations 1585.check-if-string-is-transformable-with-substring-sort-operations.cpp)
+add_executable(1078.occurrences-after-bigram 1078.occurrences-after-bigram.cpp)
