@@ -11,6 +11,7 @@
 #include <set>
 #include <vector>
 #include <stack>
+#include <queue>
 #include <string>
 #include <algorithm>
 
@@ -19,6 +20,7 @@ using std::unordered_set;
 using std::set;
 using std::vector;
 using std::stack;
+using std::queue;
 using std::string;
 using std::pair;
 using std::cout;
