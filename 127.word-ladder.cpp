@@ -29,8 +29,8 @@ public:
                 // 尝试替换单词的每一个位
                 for (auto &c : cur) {
                     char origin = c;
-                    for (int j = 0; j < 26; ++j) {
-                        c = 'a' + j;
+                    for (char j = 'a'; j <= 'z'; ++j) {
+                        c = j;
 
                         if (set_word.find(cur) != set_word.end()
                             && set_visited.find(cur) == set_visited.end()) {

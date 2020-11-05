@@ -4,7 +4,7 @@ project(leetcode)
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 14)
 
-add_compile_options(-Wall)
+#add_compile_options(-Wall)
 add_compile_options(-lm)
 # add_compile_options(-fsanitize=address -fno-omit-frame-pointer)
 
@@ -14,7 +14,6 @@ add_executable(35.fu-za-lian-biao-de-fu-zhi-lcof lcof/35.fu-za-lian-biao-de-fu-z
 add_executable(430.flatten-a-multilevel-doubly-linked-list 430.flatten-a-multilevel-doubly-linked-list.cpp)
 add_executable(925.long-pressed-name 925.long-pressed-name.c)
 add_executable(1171.remove-zero-sum-consecutive-nodes-from-linked-list 1171.remove-zero-sum-consecutive-nodes-from-linked-list.cpp)
-
 add_executable(725.split-linked-list-in-parts 725.split-linked-list-in-parts.cpp)
 add_executable(763.partition-labels 763.partition-labels.c)
 add_executable(02.04.partition-list-lcci lcci/02.04.partition-list-lcci.c)
@@ -59,3 +58,4 @@ add_executable(1446.consecutive-characters 1446.consecutive-characters.c)
 add_executable(127.word-ladder 127.word-ladder.cpp)
 add_executable(1585.check-if-string-is-transformable-with-substring-sort-operations 1585.check-if-string-is-transformable-with-substring-sort-operations.cpp)
 add_executable(1078.occurrences-after-bigram 1078.occurrences-after-bigram.cpp)
+add_executable(126.word-ladder-ii 126.word-ladder-ii.cpp)
