@@ -60,6 +60,5 @@ add_executable(1585.check-if-string-is-transformable-with-substring-sort-operati
 add_executable(1078.occurrences-after-bigram 1078.occurrences-after-bigram.cpp)
 add_executable(126.word-ladder-ii 126.word-ladder-ii.cpp)
 add_executable(433.minimum-genetic-mutation 433.minimum-genetic-mutation.cpp)
-add_executable(937.reorder-data-in-log-files 937.reorder-data-in-log-files.c)
 add_executable(1598.crawler-log-folder 1598.crawler-log-folder.cpp)
 add_executable(1332.remove-palindromic-subsequences 1332.remove-palindromic-subsequences.cpp)
