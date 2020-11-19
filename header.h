@@ -10,6 +10,8 @@
 #include <string.h>
 #include <ctype.h>
 #include <math.h>
+#include <limits.h>
+
 
 typedef enum {
     false,
@@ -20,6 +22,13 @@ struct ListNode {
     int val;
     struct ListNode *next;
 };
+
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+};
+
 
 #define list_create_from_int_array(data) ListCreate(data, array_int_len(data))
 struct ListNode *ListCreate(int *data, int len)
