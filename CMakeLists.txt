@@ -73,3 +73,5 @@ add_executable(564.find-the-closest-palindrome 564.find-the-closest-palindrome.c
 add_executable(450.delete-node-in-a-bst 450.delete-node-in-a-bst.c)
 add_executable(1622.fancy-sequence 1622.fancy-sequence.cpp)
 add_executable(1491.average-salary-excluding-the-minimum-and-maximum-salary 1491.average-salary-excluding-the-minimum-and-maximum-salary.c)
+add_executable(724.find-pivot-index 724.find-pivot-index.c)
+add_executable(307.range-sum-query-mutable 307.range-sum-query-mutable.c)
