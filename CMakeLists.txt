@@ -76,3 +76,8 @@ add_executable(1491.average-salary-excluding-the-minimum-and-maximum-salary 1491
 add_executable(724.find-pivot-index 724.find-pivot-index.c)
 add_executable(307.range-sum-query-mutable 307.range-sum-query-mutable.c)
 add_executable(304.range-sum-query-2d-immutable 304.range-sum-query-2d-immutable.c)
+add_executable(242.valid-anagram 242.valid-anagram.c)
+add_executable(main main.cpp)
+
+add_executable(49.group-anagrams 49.group-anagrams.cpp)
+add_executable(438.find-all-anagrams-in-a-string 438.find-all-anagrams-in-a-string.cpp)
