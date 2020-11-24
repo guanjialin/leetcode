@@ -83,3 +83,4 @@ add_executable(438.find-all-anagrams-in-a-string 438.find-all-anagrams-in-a-stri
 add_executable(165.compare-version-numbers 165.compare-version-numbers.c)
 add_executable(452.minimum-number-of-arrows-to-burst-balloons 452.minimum-number-of-arrows-to-burst-balloons.c)
 add_executable(1525.number-of-good-ways-to-split-a-string 1525.number-of-good-ways-to-split-a-string.cpp)
+add_executable(222.count-complete-tree-nodes 222.count-complete-tree-nodes.c)
