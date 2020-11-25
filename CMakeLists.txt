@@ -85,3 +85,6 @@ add_executable(452.minimum-number-of-arrows-to-burst-balloons 452.minimum-number
 add_executable(1525.number-of-good-ways-to-split-a-string 1525.number-of-good-ways-to-split-a-string.cpp)
 add_executable(222.count-complete-tree-nodes 222.count-complete-tree-nodes.c)
 add_executable(1261.find-elements-in-a-contaminated-binary-tree 1261.find-elements-in-a-contaminated-binary-tree.cpp)
+add_executable(121.best-time-to-buy-and-sell-stock 121.best-time-to-buy-and-sell-stock.c)
+add_executable(962.maximum-width-ramp 962.maximum-width-ramp.c)
+add_executable(179.largest-number 179.largest-number.c)
