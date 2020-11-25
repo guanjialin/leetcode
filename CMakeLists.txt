@@ -88,3 +88,6 @@ add_executable(1261.find-elements-in-a-contaminated-binary-tree 1261.find-elemen
 add_executable(121.best-time-to-buy-and-sell-stock 121.best-time-to-buy-and-sell-stock.c)
 add_executable(962.maximum-width-ramp 962.maximum-width-ramp.c)
 add_executable(179.largest-number 179.largest-number.c)
+add_executable(263.ugly-number 263.ugly-number.c)
+add_executable(264.ugly-number-ii 264.ugly-number-ii.c)
+add_executable(01.01.is-unique-lcci lcci/01.01.is-unique-lcci.c)
