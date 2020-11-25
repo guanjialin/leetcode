@@ -56,6 +56,14 @@ struct ListNode {
     static ListNode *create(vector<int> data);
 };
 
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+
 ListNode * ListNode::create(vector<int> data) {
     struct ListNode *p = nullptr;
 
