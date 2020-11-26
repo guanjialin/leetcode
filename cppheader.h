@@ -15,6 +15,7 @@
 #include <string>
 #include <algorithm>
 #include <math.h>
+#include <bitset>
 
 using std::set;
 using std::multiset;
@@ -25,6 +26,7 @@ using std::unordered_multiset;
 using std::vector;
 using std::stack;
 using std::queue;
+using std::bitset;
 using std::priority_queue;
 using std::string;
 using std::pair;
