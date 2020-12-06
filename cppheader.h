@@ -12,10 +12,12 @@
 #include <vector>
 #include <stack>
 #include <queue>
+#include <list>
 #include <string>
 #include <algorithm>
 #include <math.h>
 #include <bitset>
+#include <climits>
 
 using std::set;
 using std::multiset;
@@ -26,6 +28,8 @@ using std::unordered_multiset;
 using std::vector;
 using std::stack;
 using std::queue;
+using std::deque;
+using std::list;
 using std::bitset;
 using std::priority_queue;
 using std::string;
@@ -65,8 +69,18 @@ struct TreeNode {
     int val;
     TreeNode *left;
     TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
+
+/*
+Node n1, n2, n3;
+n1.val = 1; n2.val = 2, n3.val = 3;
+n1.left = &n2; n1.right = &n3;
+n2.left = n2.right = n3.left = n3.right = nullptr;
+Solution().connect(&n1);
+ */
 
 
 ListNode * ListNode::create(vector<int> data) {

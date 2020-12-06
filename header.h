@@ -11,6 +11,7 @@
 #include <ctype.h>
 #include <math.h>
 #include <limits.h>
+#include "uthash/uthash.h"
 
 
 typedef enum {
@@ -22,6 +23,13 @@ struct ListNode {
     int val;
     struct ListNode *next;
 };
+#define list_node ListNode
+
+struct DoubleListNode {
+    int val;
+    struct DoubleListNode *next, *prev;
+};
+#define double_list_node DoubleListNode
 
 struct TreeNode {
     int val;
@@ -62,6 +70,7 @@ void ListPrint(const struct ListNode *list)
 #define array_print(array, size, fmt) \
 { printf("["); for (int i = 0; i < size; ++i) printf(fmt, array[i]); printf("]\n"); }
 #define array_int_print(array, size) array_print(array, size, "%d\t")
+#define array_str_print(array, size) array_print(array, size, "%s\t")
 
 #define array_len(array, type) (sizeof(array) / sizeof(type))
 #define array_int_len(array) array_len(array, int)
