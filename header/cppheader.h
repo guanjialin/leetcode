@@ -15,7 +15,7 @@
 #include <list>
 #include <string>
 #include <algorithm>
-#include <math.h>
+#include <cmath>
 #include <bitset>
 #include <climits>
 
@@ -49,8 +49,8 @@ public:
 
     Node(int _val) {
         val = _val;
-        next = NULL;
-        random = NULL;
+        next = nullptr;
+        random = nullptr;
     }
 };
 
@@ -70,7 +70,7 @@ struct TreeNode {
     TreeNode *left;
     TreeNode *right;
     TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 

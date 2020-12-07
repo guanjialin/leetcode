@@ -1,9 +1,9 @@
 //
-// Created by dell on 2020/10/20.
+// Created by addzero on 2020/12/7.
 //
 
-#ifndef LEETCODE_HEADER_H
-#define LEETCODE_HEADER_H
+#ifndef LEETCODE_CHEADER_H
+#define LEETCODE_CHEADER_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,8 +15,8 @@
 
 
 typedef enum {
-    false,
-    true
+    false = 0,
+    true = 1,
 } bool;
 
 struct ListNode {
@@ -81,4 +81,4 @@ void array_int_swap(int data[], int index1, int index2) {
     data[index2] = temp;
 }
 
-#endif //LEETCODE_HEADER_H
+#endif //LEETCODE_CHEADER_H
