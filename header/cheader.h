@@ -70,6 +70,7 @@ void ListPrint(const struct ListNode *list)
 #define array_print(array, size, fmt) \
 { printf("["); for (int i = 0; i < size; ++i) printf(fmt, array[i]); printf("]\n"); }
 #define array_int_print(array, size) array_print(array, size, "%d\t")
+#define array_int_print_all(array) array_print(array, array_int_len(array), "%d\t")
 #define array_str_print(array, size) array_print(array, size, "%s\t")
 
 #define array_len(array, type) (sizeof(array) / sizeof(type))
