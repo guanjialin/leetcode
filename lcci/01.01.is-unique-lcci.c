@@ -3,8 +3,9 @@
 //
 
 
-#include "../header.h"
+#include "header.h"
 
+// TODO 本题还可用一个 int 做位运算，不知道算不算额外的数据结构
 #ifdef __QSORT__
 // 使用排序的解法
 static int cmp(const void *x, const void *y)
