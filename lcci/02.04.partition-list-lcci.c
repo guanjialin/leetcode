@@ -10,7 +10,7 @@
  * };
  */
 
-#include "../header.h"
+#include "header.h"
 
 struct ListNode* partition(struct ListNode* head, int x){
     struct ListNode dummyslow, dummyfast;
