@@ -2,9 +2,10 @@
 // Created by dell on 2020/10/20.
 //
 
-#include "../cppheader.h"
+#include "../header/cppheader.h"
 
 #ifdef __RECURSION__
+// 用 hash_map 存节点
 class Solution {
 public:
     Node* copyRandomList(Node* head) {
@@ -28,6 +29,7 @@ private:
     std::unordered_map<Node *, Node *> umap;
 };
 #else
+// 将新节点附到旧节点后，则新random也在旧random->next
 class Solution {
 public:
     Node *copyRandomList(Node *head) {
