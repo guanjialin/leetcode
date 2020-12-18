@@ -5,7 +5,7 @@
 
 #ifdef __LOCAL__
 
-#include "../header.h"
+#include "header.h"
 
 #endif
 
