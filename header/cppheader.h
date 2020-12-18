@@ -8,6 +8,7 @@
 #include <iostream>
 #include <unordered_map>
 #include <unordered_set>
+#include <map>
 #include <set>
 #include <vector>
 #include <stack>
@@ -19,6 +20,7 @@
 #include <bitset>
 #include <climits>
 
+using std::map;
 using std::set;
 using std::multiset;
 using std::unordered_map;
@@ -54,7 +56,6 @@ public:
     }
 };
 
-
 struct ListNode {
     int val;
     ListNode *next;
@@ -65,6 +66,96 @@ struct ListNode {
     static ListNode *create(vector<int> data);
 };
 
+// 双向队列
+template <typename T>
+struct DoubleListNode {
+    T val;
+    DoubleListNode *next = nullptr, *prev = nullptr;
+    DoubleListNode() {};
+    DoubleListNode(T _val) : val(_val) {};
+
+    DoubleListNode<T> *InsertAfter(const T &_val);
+    DoubleListNode<T> *InsertBefore(const T &_val);
+//    DoubleListNode<T> PushFront(const T &_val);
+//    DoubleListNode<T> PushBack(const T &_val);
+//    T Remove(const DoubleListNode<T> *pos);
+    T Remove();
+//    DoubleListNode<T> PopFront();
+//    DoubleListNode<T> PopBack();
+    bool Empty();
+};
+
+// 带头结点的双向循环队列
+template<typename T>
+DoubleListNode<T> *DoubleListNode<T>::InsertAfter(const T &_val) {
+    auto node = new DoubleListNode<T>(_val);
+    node->next = this->next;
+    node->prev = this;
+    this->next = node;
+    node->next->prev = node;
+
+    return node;
+}
+
+template<typename T>
+DoubleListNode<T> *DoubleListNode<T>::InsertBefore(const T &_val) {
+    auto node = new DoubleListNode<T>(_val);
+    node->prev = this->prev;
+    node->next = this;
+    node->prev->next = node;
+    this->prev = node;
+
+    return node;
+}
+
+//template<typename T>
+//DoubleListNode<T> DoubleListNode<T>::PushFront(const T &_val) {
+//    return DoubleListNode<T>();
+//}
+
+//template<typename T>
+//DoubleListNode<T> DoubleListNode<T>::PushBack(const T &_val) {
+//    return DoubleListNode<T>();
+//}
+
+//template<typename T>
+//T DoubleListNode<T>::Remove(const DoubleListNode<T> *pos) {
+//    pos->prev->next = pos->next;
+//    pos->next->prev = pos->prev;
+//    T ans = pos->val;
+//    delete(pos);
+//
+//    return val;
+//}
+template<typename T>
+T DoubleListNode<T>::Remove() {
+    this->prev->next = this->next;
+    this->next->prev = this->prev;
+
+    T ans = this->val;
+    delete this;
+
+    return ans;
+}
+
+template<typename T>
+bool DoubleListNode<T>::Empty() {
+    return this->next == this;
+}
+
+//template<typename T>
+//DoubleListNode<T> DoubleListNode<T>::PopFront() {
+//    return DoubleListNode<T>();
+//}
+//
+//template<typename T>
+//DoubleListNode<T> DoubleListNode<T>::PopBack() {
+//    return DoubleListNode<T>();
+//}
+
+// end of 带头结点双向循环队列
+
+
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -73,14 +164,6 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
-
-/*
-Node n1, n2, n3;
-n1.val = 1; n2.val = 2, n3.val = 3;
-n1.left = &n2; n1.right = &n3;
-n2.left = n2.right = n3.left = n3.right = nullptr;
-Solution().connect(&n1);
- */
 
 
 ListNode * ListNode::create(vector<int> data) {
