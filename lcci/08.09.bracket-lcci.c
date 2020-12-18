@@ -2,7 +2,7 @@
 // Created by dell on 2020/10/31.
 //
 
-#include "../header.h"
+#include "header.h"
 
 /**
  * Note: The returned array must be malloced, assume caller calls free().
