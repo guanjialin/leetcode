@@ -3,7 +3,7 @@
 //
 
 
-#include "../cppheader.h"
+#include "cppheader.h"
 
 #if __HEAP__
 // 堆
