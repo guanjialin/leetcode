@@ -19,6 +19,8 @@
 #include <cmath>
 #include <bitset>
 #include <climits>
+#include <cstring>
+#include <numeric>
 
 using std::map;
 using std::set;
@@ -43,18 +45,18 @@ using std::min;
 using std::max;
 
 // Definition for a Node.
-class Node {
-public:
-    int val;
-    Node* next;
-    Node* random;
-
-    Node(int _val) {
-        val = _val;
-        next = nullptr;
-        random = nullptr;
-    }
-};
+//class Node {
+//public:
+//    int val;
+//    Node* next;
+//    Node* random;
+//
+//    Node(int _val) {
+//        val = _val;
+//        next = nullptr;
+//        random = nullptr;
+//    }
+//};
 
 struct ListNode {
     int val;
