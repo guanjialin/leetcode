@@ -92,63 +92,69 @@ private:
     unordered_map<int, DoubleListNode<list_value> *> keys;    // first->key, second->node
 };
 #else
-struct lfu_node {
+// 官方题解，更精辟
+struct entry
+{
     int key;
     int value;
     int freq;
-    lfu_node(int _key, int _value, int _freq) : key(_key), value(_value), freq(_freq) {};
+    entry(int _key, int _value, int _freq) : key(_key), value(_value), freq(_freq) {};
 };
+
 class LFUCache {
 public:
     LFUCache(int capacity) {
-        this->capacity = capacity;
-        this->min_freq = 1;
+        cap = capacity;
     }
 
     int get(int key) {
-        if (!key_table.count(key)) {
+        if (!idx_tables.count(key)) {
             return -1;
         }
-        put(key, key_table[key]->value);
-
-        return key_table[key]->value;
+        put(key, (*idx_tables[key])->value);
+        return (*idx_tables[key])->value;
     }
 
     void put(int key, int value) {
-        if (!capacity) {
+        if (!cap) {
             return;
         }
 
-        if (key_table.count(key)) {
-            auto freq = key_table[key]->freq;
-            freq_table[freq].erase(key_table[key]);
-            if (freq_table[freq].empty()) {
-                freq_table.erase(freq);
-                if (freq == min_freq) {
-                    ++min_freq;
+        if (idx_tables.count(key)) {    // 命中
+            auto freq = (*idx_tables[key])->freq;
+            // 先删除旧的freq上的节点。
+            freq_tables[freq].erase(idx_tables[key]); // 这里已经把 item 释放掉了
+            // 如果旧的freq上的链表已经没有节点，则直接删除链表
+            if (freq_tables[freq].empty()) {
+                freq_tables.erase(freq);
+                min_freq += min_freq == freq;
+            }
+
+            // 插入到 freq + 1 的链表上
+            freq_tables[freq + 1].push_front(new entry(key, value, freq + 1));
+            idx_tables[key] = freq_tables[freq + 1].begin();
+        } else {    // 未命中
+            // 如果空间满了，则移除使用频率最小的
+            if (idx_tables.size() == cap) {
+                idx_tables.erase(freq_tables[min_freq].back()->key);
+                freq_tables[min_freq].pop_back();
+                if (freq_tables[min_freq].empty()) {
+                    freq_tables.erase(min_freq);
                 }
             }
-            freq_table[freq + 1].push_front(lfu_node(key, value, freq + 1));
-            key_table[key] = freq_table[freq + 1].begin();
-        } else {
-            if (key_table.size() == capacity) {
-                key_table.erase(freq_table[min_freq].back().key);
-                freq_table[min_freq].pop_back();
-                if (freq_table[min_freq].empty()) {
-                    freq_table.erase(min_freq);
-                }
-            }
-            freq_table[1].push_front(lfu_node(key, value, 1));
-            key_table[key] = freq_table[1].begin();
+
+            // 先插入
+            freq_tables[1].push_front(new entry(key, value, 1));
+            idx_tables[key] = freq_tables[1].begin();
             min_freq = 1;
         }
     }
 
 private:
-    int capacity;
-    int min_freq;
-    unordered_map<int, list<lfu_node>> freq_table;
-    unordered_map<int, list<lfu_node>::iterator> key_table;
+    int cap = 0;
+    int min_freq = 0;
+    unordered_map<int, list<entry *>> freq_tables;    // first -> freq, second -> entry;
+    unordered_map<int, list<entry *>::iterator> idx_tables;
 };
 #endif
 

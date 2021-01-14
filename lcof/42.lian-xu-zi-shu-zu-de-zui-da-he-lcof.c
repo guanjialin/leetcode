@@ -3,7 +3,7 @@
 //
 
 
-#include "../header.h"
+#include "header.h"
 
 int maxSubArray(int* nums, int numsSize)
 {

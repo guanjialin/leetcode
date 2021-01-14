@@ -3,9 +3,8 @@
 //
 
 
-#include "cppheader.h"
+#include "header/cppheader.h"
 
-// TODO 用二分搜索应该会更快
 class Solution {
 public:
     int removePalindromeSub(string s) {

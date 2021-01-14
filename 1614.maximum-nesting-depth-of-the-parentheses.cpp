@@ -25,7 +25,7 @@ public:
     }
 };
 #else
-#include "header.h"
+#include "header/header.h"
 int maxDepth(char * s)
 {
     int ans = 0, balance = 0;
